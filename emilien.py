@@ -49,7 +49,7 @@ while jeu1.alu > 1 :
 
   else :
     joueur2 = j2
-    nb = int(input(j2+" combien d'allumettes veux-tu retirer ?"))
+    nombre = int(input(j2+" combien d'allumettes veux-tu retirer ?"))
     if jeu1.verifie(nombre) is True:
       jeu1.alu = jeu1.alu - nombre
       tour=tour+1
@@ -67,3 +67,4 @@ else:
     print ("Bravo  {} !! Tu as gagné".format(j2))
   else:
     print ("Bravo  {} !! Tu as gagné".format(j1))
+  
