@@ -17,6 +17,7 @@ class nim:
     if 1 <= nombre <= 3 :
       return True
     else :
+      print("Vous ne pouvez pas enlever {}".format(nombre))
       return False
       
 
@@ -39,13 +40,13 @@ while jeu1.alu > 1 :
   
   if tour % 2 == 0:
     joueur1 = j1
-    nombre= int(input(j1+" combien d'allumettes veux-tu retirer ?"))
+    nombre = int(input(j1+" combien d'allumettes veux-tu retirer ?"))
     if jeu1.verifie(nombre) is True:
       jeu1.alu = jeu1.alu - nombre
       tour=tour+1
       print(jeu1.alu)
     else:
-      tour -= 1
+      tour = tour - 1
 
   else :
     joueur2 = j2
@@ -55,7 +56,7 @@ while jeu1.alu > 1 :
       tour=tour+1
       print(jeu1.alu)
     else:
-      tour -= 1
+      tour = tour - 1
 
 if jeu1.alu == 1:
   if tour%2 == 0:
