@@ -11,7 +11,7 @@ class nim:
     print("On a", self.allumettes, "sur la table, jouez !")
 
   def Afficher(self):
-    print(jeu1.alu)
+    return print(jeu1.alu)
 
   def verifie(self, nombre):
     if 1 <= nombre <= 3 :
@@ -39,24 +39,26 @@ tour = int(input('Ecrivez 0 pour que le joueur 1 commence et 1 pour que ce soit 
 while jeu1.alu > 1 :
   
   if tour % 2 == 0:
-    joueur1 = j1
     nombre = int(input(j1+" combien d'allumettes veux-tu retirer ?"))
     if jeu1.verifie(nombre) is True:
       jeu1.alu = jeu1.alu - nombre
       tour=tour+1
-      print(jeu1.alu)
+      jeu1.Afficher()
+
     else:
-      tour = tour - 1
+      print("Rejouez:")
 
   else :
-    joueur2 = j2
     nombre = int(input(j2+" combien d'allumettes veux-tu retirer ?"))
     if jeu1.verifie(nombre) is True:
       jeu1.alu = jeu1.alu - nombre
       tour=tour+1
-      print(jeu1.alu)
+      jeu1.Afficher()
+
     else:
-      tour = tour - 1
+      print("Rejouez:")
+
+
 
 if jeu1.alu == 1:
   if tour%2 == 0:
@@ -68,4 +70,3 @@ else:
     print ("Bravo  {} !! Tu as gagné".format(j1))
   else:
     print ("Bravo  {} !! Tu as gagné".format(j2))
-  
