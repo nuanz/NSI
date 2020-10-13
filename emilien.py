@@ -1,10 +1,8 @@
 class nim:
-  def __init__(self, alu, tour, gagnant = "",):
-    self.j1 = j1
-    self.j2 = j2
-    self.alu=alu
-    self.tour= tour
-    self.gagnant=""
+  def __init__(self, j1, j2, alu):
+    self.j1 = "Arno"
+    self.j2 = "Egxon"
+    self.alu= alu
 
   def texte (self,j1,j2):
     print("Les joueurs sont", self.j1, "et", self.j2)
@@ -31,10 +29,10 @@ class nim:
 j1= input("Choisi ton nom j1 :")
 j2= input("Choisi ton nom j2 :")
 alu =int(input("Nombre d'allumettes ?"))
-
-jeu1=nim(alu,j1,j2)
-jeu1.Afficher()
 tour = int(input('Ecrivez 0 pour que le joueur 1 commence et 1 pour que ce soit le joueur 2 :'))
+
+jeu1=nim(j1,j2,alu)
+jeu1.Afficher()
 
 while jeu1.alu > 1 :
   
