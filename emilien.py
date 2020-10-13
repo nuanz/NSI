@@ -59,12 +59,12 @@ while jeu1.alu > 1 :
 
 if jeu1.alu == 1:
   if tour%2 == 0:
-    print ("Bravo  {} !! Tu as gagné".format(j1))
-  else:
     print ("Bravo  {} !! Tu as gagné".format(j2))
+  else:
+    print ("Bravo  {} !! Tu as gagné".format(j1))
 else:
   if tour%2 == 0:
-    print ("Bravo  {} !! Tu as gagné".format(j2))
-  else:
     print ("Bravo  {} !! Tu as gagné".format(j1))
+  else:
+    print ("Bravo  {} !! Tu as gagné".format(j2))
   
