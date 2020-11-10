@@ -1,5 +1,6 @@
 #.q13
-
+SELECT nom, z_max-z_min AS ecart_alt
+FROM communes ORDER BY ecart_alt DESC LIMIT 5
 
 #.q14
 SELECT nom, Population_2010-Population_1999 AS Habitants_Diff
