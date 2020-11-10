@@ -39,4 +39,10 @@ ORDER BY nouvelle_colonne
 
 LENGTH(attribut)
 
-pute
+
+
+# JOIN 
+SELECT regions.nom_region, departements.nom_dept, departements.num_dept
+FROM departements JOIN regions
+ON departements.num_region = regions.num_region
+WHERE regions.nom_region LIKE 'Occitanie' OR regions.nom_region LIKE 'Nouvelle-Aquitaine'
