@@ -1,0 +1,6 @@
+#.q13
+
+
+#.q14
+SELECT nom, Population_2010-Population_1999 AS Habitants_Diff
+FROM communes WHERE num_departement=46 ORDER BY Habitants_Diff DESC LIMIT 5
