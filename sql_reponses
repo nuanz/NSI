@@ -5,3 +5,15 @@ FROM communes ORDER BY ecart_alt DESC LIMIT 5
 #.q14
 SELECT nom, Population_2010-Population_1999 AS Habitants_Diff
 FROM communes WHERE num_departement=46 ORDER BY Habitants_Diff DESC LIMIT 5
+
+#.q15
+SELECT departements.nom_dept, departements.num_dept, COUNT(*) AS nb_communes, SUM(Population_2010) AS pop
+FROM communes JOIN departements
+ON communes.num_departement = departements.num_dept
+GROUP BY communes.num_departement ORDER BY nb_communes DESC LIMIT 12
+
+#.q16
+SELECT regions.nom_region, departements.num_dept, departements.nom_dept
+FROM departements JOIN regions
+ON departements.num_region = regions.num_region
+WHERE regions.nom_region LIKE 'Occitanie' OR regions.nom_region LIKE 'Nouvelle-Aquitaine'
